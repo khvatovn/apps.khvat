@@ -92,20 +92,26 @@ const SettingsPage: React.FC = () => {
           <SettingsSection>
             <SettingsStatistics />
             <SettingsHaptic />
-            <SettingsTheme
-              toThemeSettingPage={() => openSheet(() => navigation.navigate(ROUTES.SETTINGS_THEME))}
+            <SettingsNotifications
+              goToNotificationsPage={() =>
+                openSheet(() => navigation.navigate(ROUTES.SETTINGS_NOTIFICATIONS))
+              }
             />
           </SettingsSection>
 
           <SettingsSection>
-            <SettingsLanguage
-              goToLanguageSettingsPage={() =>
-                openSheet(() => navigation.navigate(ROUTES.SETTINGS_LANGUAGE))
-              }
+            <SettingsTheme
+              toThemeSettingPage={() => openSheet(() => navigation.navigate(ROUTES.SETTINGS_THEME))}
             />
             <SettingsTransliterations
               goToTransliterationsSettingsPage={() =>
                 openSheet(() => navigation.navigate(ROUTES.SETTINGS_TRANSLITERATION))
+              }
+            />
+            <SettingsLanguage
+              isLast
+              goToLanguageSettingsPage={() =>
+                openSheet(() => navigation.navigate(ROUTES.SETTINGS_LANGUAGE))
               }
             />
           </SettingsSection>
@@ -118,11 +124,6 @@ const SettingsPage: React.FC = () => {
 
           <SettingsSection>
             <StoreReviewLink iosId="id6479753061" packageName={process.env.ANDROID_PACKAGE} />
-            <SettingsNotifications
-              goToNotificationsPage={() =>
-                openSheet(() => navigation.navigate(ROUTES.SETTINGS_NOTIFICATIONS))
-              }
-            />
             <ReportLink
               goToReportPage={() => openSheet(() => navigation.navigate(ROUTES.SETTINGS_REPORT))}
             />

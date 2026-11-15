@@ -21,7 +21,6 @@ const SettingsTheme: React.FC<SettingsThemeProps> = ({ toThemeSettingPage }) => 
       leftIcon={<PaintBrushIcon size={20} color={colors.BgContrast} />}
       text={t("settings.theme.title")}
       subText={getThemeTitle(themeString)}
-      isLast
       onClick={toThemeSettingPage}
     />
   );

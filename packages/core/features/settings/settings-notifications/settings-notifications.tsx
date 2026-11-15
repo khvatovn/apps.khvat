@@ -26,6 +26,7 @@ const SettingsNotifications: React.FC<SettingsNotificationsProps> = ({ goToNotif
       text={t("settings.notifications.title")}
       subText={subText}
       onClick={goToNotificationsPage}
+      isLast
     />
   );
 };

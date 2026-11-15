@@ -28,7 +28,6 @@ const SettingsTransliterations: React.FC<SettingsTransliterationsProps> = ({
 
   return (
     <SettingItem
-      isLast
       leftIcon={<StackIcon size={20} color={colors.BgContrast} />}
       text={t("transliterationSystems.transliterationSystems")}
       subText={transliterationSystems[transliterations]}
